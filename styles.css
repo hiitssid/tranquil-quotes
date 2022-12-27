@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+body {
+  background-color: #242424;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+header {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: -2rem;
+}
+
+.card {
+  background-color: #488b8f;
+  border: 2px solid #add2c9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 100px#488b8f;
+  width: 360px;
+  min-height: 60vh;
+  padding: 0 25px 25px 25px;
+  /* min-height: 60vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 100px#214142;
+}
+.card .image img {
+  border-bottom: 1px solid #add2c9;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  padding-top: 2rem;
+}
+
+#quote {
+  text-align: center;
+  font-size: 1.02rem;
+  font-weight: 400;
+}
+#author {
+  margin-top: 1rem;
+  font-weight: 200;
+  font-size: 1rem;
+}
