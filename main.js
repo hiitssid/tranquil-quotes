@@ -9,6 +9,7 @@ function generateQuote() {
     })
     .then(function (data) {
       quote.innerText = data[ranNum].text;
+      console.log(quote.innerText);
       if (data[ranNum].author == null) {
         authorName.innerText = `🙏`;
       } else {
