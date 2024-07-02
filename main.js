@@ -1,19 +1,12 @@
-window.onload(generateQuote());
-function generateQuote() {
-  let ranNum = Math.floor(Math.random() * 1643);
+const URL = "https://type.fit/api/quotes";
+const getQuote = async () => {
+  let ranNum = Math.floor(Math.random() * 16);
   const quote = document.getElementById("quote");
   const authorName = document.getElementById("author");
-  fetch("https://type.fit/api/quotes")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      quote.innerText = data[ranNum].text;
-      console.log(quote.innerText);
-      if (data[ranNum].author == null) {
-        authorName.innerText = `🙏`;
-      } else {
-        authorName.innerText = `${data[ranNum].author}`;
-      }
-    });
-}
+  const response = await fetch(URL);
+  const data = await response.json();
+  quote.innerText = data[ranNum].text;
+  authorName.innerText = `${data[ranNum].author}`;
+  console.log(data);
+};
+getQuote();
